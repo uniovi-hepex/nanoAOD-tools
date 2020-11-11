@@ -522,6 +522,8 @@ jetmetUncertainties2016All = lambda : jetmetUncertaintiesProducer("2016", "Summe
 jetmetUncertainties2017 = lambda : jetmetUncertaintiesProducer("2017", "Fall17_17Nov2017_V32_MC", [ "Total" ])
 jetmetUncertainties2017METv2 = lambda : jetmetUncertaintiesProducer("2017", "Fall17_17Nov2017_V32_MC", metBranchName='METFixEE2017')
 jetmetUncertainties2017All = lambda : jetmetUncertaintiesProducer("2017", "Fall17_17Nov2017_V32_MC", [ "All" ])
+jetmetUncertainties20175TeV = lambda : jetmetUncertaintiesProducer("2017", "Spring18_ppRef5TeV_V4_MC", [ "Total" ])
+jetmetUncertainties20175TeVData = lambda : jetmetUncertaintiesProducer("2017", "Spring18_ppRef5TeV_V4_DATA", [ "Total" ], isData=True)
 
 jetmetUncertainties2018 = lambda : jetmetUncertaintiesProducer("2018", "Autumn18_V8_MC", [ "Total" ])
 jetmetUncertainties2018Data = lambda : jetmetUncertaintiesProducer("2018", "Autumn18_RunB_V8_DATA", archive="Autumn18_V8_DATA", isData=True)

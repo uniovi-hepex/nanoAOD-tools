@@ -70,10 +70,11 @@ def eventLoop(
         entries = len(eventRange)
     if maxEvents > 0:
         entries = min(entries, maxEvents)
-
     for ie, i in enumerate(list(range(entries)) if eventRange == None else eventRange):
         if maxEvents > 0 and ie >= maxEvents:
             break
+        # Uncomment for debugging specific entries
+        #e = Event(inputTree, 5)
         e = Event(inputTree, i)
         clearExtraBranches(inputTree)
         doneEvents += 1

@@ -13,7 +13,8 @@ _rootBranchType2PythonArray = {
     'D': 'd',
     'l': 'L',
     'L': 'l',
-    'O': 'B'
+    'O': 'B',
+    'S': 'h',
 }
 
 
@@ -25,6 +26,9 @@ class OutputBranch:
         n = int(n)
         self.buff = array(
             _rootBranchType2PythonArray[rootBranchType], n * [0. if rootBranchType in 'FD' else 0])
+#       if "seediEtaOriX" in name: # This corrects a bug in nanoAODv11 where the Electron_seediEtaOriX is saved in 8 bits signed but it needs higher values 
+#           self.buff = array(
+#               "i", n * [0. if rootBranchType in 'FD' else 0])            
         self.lenVar = lenVar
         self.n = n
         self.precision = ROOT.ReduceMantissaToNbitsRounding(
